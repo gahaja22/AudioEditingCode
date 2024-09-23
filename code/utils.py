@@ -53,7 +53,7 @@ def load_audio(audio_path: str, fn_STFT, left: int = 0, right: int = 0, device: 
 
         duration = audioldm.utils.get_duration(audio_path)
 
-        mel, _, _ = audioldm.audio.wav_to_fbank(audio_path, target_length=int(duration * 102.4), fn_STFT=fn_STFT)
+        mel, _, _ = audioldm.audio.wav_to_fbank(audio_path), fn_STFT=fn_STFT)
         mel = mel.unsqueeze(0)
     else:
         mel = audio_path
